@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌤️ Weather App</h1>
+            <div class="demo-data">
+                <p><strong>Demo Mode:</strong> This app shows sample weather data. To use with real data, you'll need to integrate with a weather API like OpenWeatherMap.</p>
+            </div>
+        </div>
+
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Enter city name..." id="cityInput">
+            <button class="search-btn" onclick="searchWeather()">Search</button>
+        </div>
+
+        <div id="loadingDiv" class="loading" style="display: none;">
+            <p>Loading weather data...</p>
+        </div>
+
+        <div id="errorDiv" class="error" style="display: none;">
+            <p>City not found. Please try again.</p>
+        </div>
+
+        <div class="weather-cards" id="weatherCards"></div>
+
+        <div class="forecast-section" id="forecastSection" style="display: none;">
+            <h2 class="forecast-title">5-Day Forecast</h2>
+            <div class="forecast-grid" id="forecastGrid"></div>
+        </div>
+    </div>
+    
+    <script src="weather.js"></script>
+</body>
+</html>
